@@ -58,8 +58,34 @@ function handleSearch(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  let forecastHTML = "";
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="weather-forecast-day-details">
+      <div class="weather-forecast-day">${day}</div>
+      <div class="weather-forecast-icon">⛈️</div>
+      <div class="weather-forecast-temperatures">
+        <span class="weather-forecast-temperatures-high">62°</span>
+        <span class="weather-forecast-temperatures-low">45°</span>
+      </div>
+      </div>
+`;
+  });
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 console.log(searchFormElement);
 searchFormElement.addEventListener("submit", handleSearch);
 
 searchCity("Omaha");
+
+displayForecast();

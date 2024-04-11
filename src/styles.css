@@ -172,17 +172,33 @@ main {
   font-style: italic;
 }
 .weather-forecast {
+  display: flex;
+  justify-content: space-around;
   margin-top: 20px;
+}
+
+.weather-forecast-details {
   text-align: center;
 }
 
+.weather-forecast-icon {
+  text-align: center;
+  font-size: 38px;
+}
+
 .weather-forecast-day {
+  text-align: center;
   font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
   opacity: 0.5;
 }
 
 .weather-forecast-temperatures {
+  display: flex;
   font-size: 13px;
+  margin-top: 10px;
+  justify-content: center;
 }
 .weather-forecast-temperatures-low {
   opacity: 0.5;
