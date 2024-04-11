@@ -1,7 +1,8 @@
 body {
-  background-color: black;
+  background-color: #dacfeb;
   font-family: "Roboto", sans-serif;
 }
+
 header {
   border-bottom: 2px solid #f9f7fe;
   padding: 0 0 30px 0;
@@ -91,7 +92,7 @@ main {
 
 .search-button {
   background: #885df1;
-  padding: 15px 30px;
+  padding: 15px 20px;
   border: none;
   margin-left: 5px;
   border-radius: 10px;
@@ -183,10 +184,6 @@ main {
 .weather-forecast-temperatures {
   font-size: 13px;
 }
-
-.weather-forecast-temperatures-high {
-}
-
 .weather-forecast-temperatures-low {
   opacity: 0.5;
 }
