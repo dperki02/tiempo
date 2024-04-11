@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(224, 213, 240);
+  background-color: black;
   font-family: "Roboto", sans-serif;
 }
 header {
@@ -169,4 +169,24 @@ main {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: italic;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-day {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+
+.weather-forecast-temperatures-high {
+}
+
+.weather-forecast-temperatures-low {
+  opacity: 0.5;
 }
