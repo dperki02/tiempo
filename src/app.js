@@ -19,6 +19,7 @@ function refreshWeather(response) {
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
 
   temperatureElement.innerHTML = Math.round(temperature);
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -58,8 +59,10 @@ function handleSearch(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
+  console.log("displayForecast");
+  console.log(response.data);
 
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
   let forecastHTML = "";
@@ -82,10 +85,15 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(city) {
+  let apiKey = "5a66ffb09c7a4o246a78be8f021tfdd3";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios(apiUrl).then(displayForecast);
+  console.log(apiUrl);
+}
+
 let searchFormElement = document.querySelector("#search-form");
 console.log(searchFormElement);
 searchFormElement.addEventListener("submit", handleSearch);
 
 searchCity("Omaha");
-
-displayForecast();
