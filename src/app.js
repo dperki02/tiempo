@@ -90,7 +90,6 @@ function displayForecast(response) {
       </div>
       </div>
 `;
-      console.log(forecastHTML);
     }
   });
 
@@ -105,7 +104,6 @@ function getForecast(city) {
 }
 
 let searchFormElement = document.querySelector("#search-form");
-console.log(searchFormElement);
 searchFormElement.addEventListener("submit", handleSearch);
 
 searchCity("Omaha");
